@@ -4,12 +4,12 @@ class DeviseCreateFuns < ActiveRecord::Migration[6.0]
   def change
     create_table :funs do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
-      t.string :last_name,          null: false
-      t.string :first_name,         null: false
-      t.integer :gender_id,         null: false
-      t.date   :birth_date,         null: false
+      t.string  :email,              null: false, default: ""
+      t.string  :encrypted_password, null: false, default: ""
+      t.string  :last_name,          null: false
+      t.string  :first_name,         null: false
+      t.integer :gender_id,          null: false
+      t.date    :birth_date,         null: false
       
 
       ## Recoverable
