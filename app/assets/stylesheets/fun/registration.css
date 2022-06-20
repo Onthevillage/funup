@@ -2,13 +2,14 @@
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
     flex-direction: row;
     flex-direction: column;
 }
 
 .white-block{
     background-color: #FFFFFF;
+    width: 350px;
+    height: 636px;
 }
 
 .funup-logo{
