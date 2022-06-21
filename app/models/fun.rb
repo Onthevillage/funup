@@ -11,6 +11,9 @@ class Fun < ApplicationRecord
     validates :birth_date
   end
 
+  has_many :messages
+  has_one :value_creater
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
 end

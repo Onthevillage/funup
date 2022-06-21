@@ -29,13 +29,27 @@ ActiveRecord::Schema.define(version: 2022_06_20_075701) do
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "fun_id", null: false
+    t.bigint "value_creater_id", null: false
+    t.integer "type_id", null: false
+    t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["fun_id"], name: "index_messages_on_fun_id"
+    t.index ["value_creater_id"], name: "index_messages_on_value_creater_id"
   end
 
   create_table "value_creaters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name_workplace", null: false
+    t.text "address_workplace", null: false
+    t.text "introduction", null: false
+    t.bigint "fun_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["fun_id"], name: "index_value_creaters_on_fun_id"
   end
 
+  add_foreign_key "messages", "funs"
+  add_foreign_key "messages", "value_creaters"
+  add_foreign_key "value_creaters", "funs"
 end
