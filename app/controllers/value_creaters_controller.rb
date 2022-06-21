@@ -1,0 +1,2 @@
+class ValueCreatersController < ApplicationController
+end

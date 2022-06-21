@@ -1,0 +1,2 @@
+class ValueCreater < ApplicationRecord
+end
