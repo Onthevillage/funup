@@ -1,10 +1,10 @@
 class ValueCreatersController < ApplicationController
     def new
+        @value_creater = ValueCreater.new
     end
 
     def create
-        binding.pry
-        ValueCreater.create(value_creater_params)
+        @value_creater = ValueCreater.create(value_creater_params)
     end
 
     private
