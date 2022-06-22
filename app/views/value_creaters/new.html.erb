@@ -3,6 +3,10 @@
         <%= form_with model: @value_creater, url: value_creaters_path, id: 'new_fun', class: 'new_fun', local: true do |f| %>
           <%#<%= render "devise/shared/error_messages", resource: resource %>
 
+          <label class="form-image">
+            <span class="image-file">画像</span>
+            <%= f.file_field :image, class: 'hidden' %>
+          </label>
 
           <div class='input-name-wrap'>
             <%= f.text_area :name_workplace, class:"value_creater", id:"name_workplace", placeholder:"勤務先" %>

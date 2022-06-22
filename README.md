@@ -24,12 +24,12 @@
 
 ##  value_creatersテーブル
 
-| Column                 | Type       | Options                        |
-| ------                 | ------     | -----------                    |
-| name_workplace         | string     | null: false                    |
-| address_workplace      | text	      | null: false                    |
-| introduction           | text       | null: false                    |
-| fun                    | references | null: false, foreign_key: true |
+| Column                 | Type       | Options                                     |
+| -----------------------| -----------| --------------------------------------------|
+| name_workplace         | string     | null: false                                 |
+| address_workplace      | text	      | null: false                                 |
+| introduction           | text       | null: false                                 |
+| fun                    | references | null: false, foreign_key: true, unique:true |
 
 ### Association
 

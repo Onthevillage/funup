@@ -9,6 +9,6 @@ class ValueCreatersController < ApplicationController
 
     private
     def value_creater_params
-        params.require(:value_creater).permit(:name_workplace, :address_workplace, :introduction).merge(fun_id: current_fun.id)
+        params.require(:value_creater).permit(:image, :name_workplace, :address_workplace, :introduction).merge(fun_id: current_fun.id)
     end
 end
