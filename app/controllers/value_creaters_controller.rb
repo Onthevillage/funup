@@ -1,4 +1,8 @@
 class ValueCreatersController < ApplicationController
+    def index
+        @value_creaters = ValueCreater.all
+    end
+
     def new
         @value_creater = ValueCreater.new
     end

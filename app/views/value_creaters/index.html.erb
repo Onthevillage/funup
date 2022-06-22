@@ -1,0 +1,19 @@
+
+      <% @value_creaters.each do |creater| %>
+        <li class='list'>
+          <%#<%= link_to item_path(item) do %>
+          <div class='creater-img-content'>
+            <%= image_tag creater.image, class: "item-img" %>
+          </div>
+
+          <div class='creater-info'>
+            <h3 class='creater-name'>
+              <%= creater.fun.last_name %> <%= creater.fun.first_name %>
+            </h3>
+            <div class='creater-workplace'>
+              <%= creater.name_workplace %>
+              <%= creater.address_workplace %>
+            </div>
+          </div>
+        </li>
+      <% end %>
