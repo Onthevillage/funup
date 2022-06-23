@@ -1,9 +1,10 @@
 
       <% @value_creaters.each do |creater| %>
         <li class='list'>
-          <%#<%= link_to item_path(item) do %>
           <div class='creater-img-content'>
-            <%= image_tag creater.image, class: "item-img" %>
+            <%= link_to value_creater_path(creater) do %>
+              <%= image_tag creater.image, class: "creater-img" %>
+            <% end %>
           </div>
 
           <div class='creater-info'>

@@ -3,3 +3,25 @@
 <% else %>
   <%= link_to "フォローする", user_relationships_path(@value_creater.id), method: :post %>
 <% end %>
+
+
+
+     
+        <li class='list'>
+          <div class='creater-img-content'>
+              <%= image_tag @value_creater.image, class: "creater-img" %>
+          </div>
+
+          <div class='creater-info'>
+            <h3 class='creater-name'>
+              <%= @value_creater.fun.last_name %> <%= @value_creater.fun.first_name %>
+            </h3>
+            <div class='creater-workplace'>
+              <%= @value_creater.name_workplace %>
+              <%= @value_creater.address_workplace %>
+            </div>
+            <div class='introduction'>
+              <%= @value_creater.introduction %>
+            </div>
+          </div>
+        </li>

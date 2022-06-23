@@ -5,10 +5,6 @@ class RelationshipsController < ApplicationController
     redirect_to request.referer
   end
 
-  def show
-    @value_creater = ValueCreater.find(params[:value_creater_id])
-  end
-
   def destroy
     current_fun.unfollow(params[:value_creater_id])
     redirect_to request.referer  

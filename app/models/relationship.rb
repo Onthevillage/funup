@@ -9,13 +9,13 @@ class Relationship < ApplicationRecord
 
      def follow(value_creater_id)
         relationships.create(value_creater_id: value_creater_id)
-      end
+     end
 
-      def unfollow(value_creater_id)
+     def unfollow(value_creater_id)
         relationships.find_by(value_creater_id: value_creater_id).destroy
-      end
+     end
 
-      def following?(value_creater)
+     def following?(value_creater)
         followings.include?(value_creater)
-      end
+     end
 end
