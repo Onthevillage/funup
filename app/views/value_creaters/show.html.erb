@@ -1,7 +1,7 @@
 <% if current_fun.following?(@value_creater) %>
-  <%= link_to "フォロー外す", user_relationships_path(@value_creater.id), method: :delete %>
+  <%= link_to "フォロー外す", value_creater_relationships_path(@value_creater.id), method: :delete %>
 <% else %>
-  <%= link_to "フォローする", user_relationships_path(@value_creater.id), method: :post %>
+  <%= link_to "フォローする", value_creater_relationships_path(@value_creater.id), method: :post %>
 <% end %>
 
 

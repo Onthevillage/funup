@@ -46,13 +46,12 @@
           </div>
         <% end %>
 
-        <%= render "devise/shared/links" %>
       </div>
     </div> 
   </div>
   <div class='under-block'>
     <div class='under-white-block'>
-     アカウントをお持ちですか？<a>ログインする</a>
+     アカウントをお持ちですか？<%=link_to 'ログインする', new_fun_session_path, class:"login-btn" %>
     </div>
   </div>
 </div>

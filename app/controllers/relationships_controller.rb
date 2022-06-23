@@ -1,8 +1,13 @@
 class RelationshipsController < ApplicationController
 
   def create
+    value_creater = ValueCreater.find(params[:value_creater_id])
+    if value_creater.fun_id != current_fun.id
     current_fun.follow(params[:value_creater_id])
     redirect_to request.referer
+    else
+      redirect_to request.referer
+    end
   end
 
   def destroy

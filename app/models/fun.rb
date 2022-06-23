@@ -15,7 +15,19 @@ class Fun < ApplicationRecord
   has_one :value_creater
 
   has_many :relationships, class_name: "Relationship", foreign_key: "fun_id", dependent: :destroy
-  has_many :followings, through: :relationships, source: :value_creater_id
+  has_many :followings, through: :relationships, source: :value_creater
+
+ def follow(value_creater_id)
+    relationships.create(value_creater_id: value_creater_id)
+ end
+
+ def unfollow(value_creater_id)
+    relationships.find_by(value_creater_id: value_creater_id).destroy
+ end
+
+ def following?(value_creater)
+    followings.include?(value_creater)
+ end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
