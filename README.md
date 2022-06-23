@@ -74,12 +74,12 @@
 
 ## relationshipsテーブル
 
-| Column        | Type       | Options                        |
-| -------       | ---------- | ------------------------------ |
-| fun           | references | null: false, foreign_key: true |
-| value_creater | references | null: false, foreign_key: true |
+| Column           | Type    | Options     |
+| -------          | --------| ----------- |
+| fun_id           | integer | null: false |
+| value_creater_id | integer | null: false |
 
 ### Association
 
 - belongs_to :fun, class_name: "Fun"
-- belongs_to :value_creater, class_name: "Value_creater"
+- belongs_to :value_creater, class_name: "ValueCreater"

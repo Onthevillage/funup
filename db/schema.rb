@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_21_075110) do
+ActiveRecord::Schema.define(version: 2022_06_22_114922) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 2022_06_21_075110) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["fun_id"], name: "index_messages_on_fun_id"
     t.index ["value_creater_id"], name: "index_messages_on_value_creater_id"
+  end
+
+  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "fun_id", null: false
+    t.integer "value_creater_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fun_id", "value_creater_id"], name: "index_relationships_on_fun_id_and_value_creater_id", unique: true
+    t.index ["fun_id"], name: "index_relationships_on_fun_id"
+    t.index ["value_creater_id"], name: "index_relationships_on_value_creater_id"
   end
 
   create_table "value_creaters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

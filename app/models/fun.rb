@@ -14,6 +14,9 @@ class Fun < ApplicationRecord
   has_many :messages
   has_one :value_creater
 
+  has_many :relationships, class_name: "Relationship", foreign_key: "fun_id", dependent: :destroy
+  has_many :followings, through: :relationships, source: :value_creater_id
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
 end
