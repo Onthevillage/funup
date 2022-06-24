@@ -1,3 +1,5 @@
+        <%= render "layouts/header" %>
+        
         <%= current_fun.last_name%>
        
         <%= form_with model: @value_creater, url: value_creaters_path, id: 'new_fun', class: 'new_fun', local: true do |f| %>

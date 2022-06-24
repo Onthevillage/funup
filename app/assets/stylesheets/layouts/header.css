@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #DBDBDB
+}
+
+
+.header-funup-logo {
+    width: 188px;
+    height: 58px;
+    text-align: left;
+}
+
+.search-input {
+    width: 275px;
+    height: 25px;
+}
+
+.header-home-icon {
+    width: 35px;
+    height: 35px; 
+}
+
+.header-fun-icon {
+    width: 40px;
+    height: 37px;
+}
+
+.header-cheer-icon {
+    width: 42px;
+    height: 36px;   
+}
+
+.header-user-icon {
+    width: 36px;
+    height: 36px;      
+}

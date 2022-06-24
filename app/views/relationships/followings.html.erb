@@ -1,2 +1,21 @@
-<h1>Relationships#followings</h1>
-<p>Find me in app/views/relationships/followings.html.erb</p>
+<%= render "layouts/header" %>
+
+      <% @value_creaters.each do |creater| %>
+        <li class='list'>
+          <div class='creater-img-content'>
+            <%= link_to value_creater_path(creater) do %>
+              <%= image_tag creater.image, class: "creater-img" %>
+            <% end %>
+          </div>
+
+          <div class='creater-info'>
+            <h3 class='creater-name'>
+              <%= creater.fun.last_name %> <%= creater.fun.first_name %>
+            </h3>
+            <div class='creater-workplace'>
+              <%= creater.name_workplace %>
+              <%= creater.address_workplace %>
+            </div>
+          </div>
+        </li>
+      <% end %>

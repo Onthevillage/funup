@@ -1,3 +1,5 @@
+<%= render "layouts/header" %>
+
 <% if current_fun.following?(@value_creater) %>
   <%= link_to "フォロー外す", value_creater_relationships_path(@value_creater.id), method: :delete %>
 <% else %>

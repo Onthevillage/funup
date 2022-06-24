@@ -1,7 +1,8 @@
-      <li><%= link_to 'ログアウト', destroy_fun_session_path, method: :delete, class: "logout" %></li>
+<%= render "layouts/header" %>
+
+      <%= link_to 'ログアウト', destroy_fun_session_path, method: :delete, class: "logout" %>
 
       <% @value_creaters.each do |creater| %>
-        <li class='list'>
           <div class='creater-img-content'>
             <%= link_to value_creater_path(creater) do %>
               <%= image_tag creater.image, class: "creater-img" %>
@@ -17,5 +18,4 @@
               <%= creater.address_workplace %>
             </div>
           </div>
-        </li>
       <% end %>
