@@ -15,7 +15,9 @@ class Fun < ApplicationRecord
   has_one :value_creater
 
   has_many :relationships, class_name: "Relationship", foreign_key: "fun_id", dependent: :destroy
+  has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "value_creater_id", dependent: :destroy
   has_many :followings, through: :relationships, source: :value_creater
+  has_many :followers, through: :reverse_of_relationships, source: :fun
 
  def follow(value_creater_id)
     relationships.create(value_creater_id: value_creater_id)

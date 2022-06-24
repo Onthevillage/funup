@@ -16,12 +16,13 @@ class RelationshipsController < ApplicationController
   end
 
   def followings
-    value_creater = ValueCreater.find(params[:value_creater_id])
+    value_creater = ValueCreater.find_by(fun_id: params[:fun_id])
     @value_creaters = value_creater.followings
   end
 
   def followers
-    value_creater = ValueCreater.find(params[:value_creater_id])
+    fun = Fun.find(params[:fun_id])
+    value_creater = ValueCreater.find(fun.value_creater)
     @value_creaters = value_creater.followers
   end
 end

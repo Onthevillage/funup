@@ -1,6 +1,7 @@
 <%= render "layouts/header" %>
 
       <%= link_to 'ログアウト', destroy_fun_session_path, method: :delete, class: "logout" %>
+      <%= link_to '仮新規作成', new_value_creater_path, method: :get, class: "new" %>
 
       <% @value_creaters.each do |creater| %>
           <div class='creater-img-content'>
