@@ -1,0 +1,31 @@
+.registrations {
+    height: 1024px;
+    width: 100%;
+}
+
+.center-block {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.white-block {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    width: 350px;
+    height: 636px;
+    margin-top: 52px;
+}
+
+.funup-logo-registration {
+    width: 273px;
+    height: 92px;
+}
+
+.under-block {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    width: 350px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 125px;
+}

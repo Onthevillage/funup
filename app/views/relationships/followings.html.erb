@@ -1,7 +1,6 @@
 <%= render "layouts/header" %>
 
       <% @value_creaters.each do |creater| %>
-        <li class='list'>
           <div class='creater-img-content'>
             <%= link_to value_creater_path(creater) do %>
               <%= image_tag creater.image, class: "creater-img" %>
@@ -17,5 +16,5 @@
               <%= creater.address_workplace %>
             </div>
           </div>
-        </li>
+          
       <% end %>

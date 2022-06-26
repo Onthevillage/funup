@@ -15,14 +15,22 @@ class RelationshipsController < ApplicationController
     redirect_to request.referer  
   end
 
-  def followings
+  def followers
     value_creater = ValueCreater.find_by(fun_id: params[:fun_id])
-    @value_creaters = value_creater.followings
+    unless value_creater.nil?
+       @funs = value_creater.followers
+    else
+      redirect_to root_path
+    end
   end
 
-  def followers
-    fun = Fun.find(params[:fun_id])
-    value_creater = ValueCreater.find(fun.value_creater)
-    @value_creaters = value_creater.followers
+  def followings
+    fun = Fun.find_by(id: params[:fun_id])
+    unless fun.nil?
+       @value_creaters = fun.followings
+    else
+      redirect_to root_path
+    end
   end
+
 end

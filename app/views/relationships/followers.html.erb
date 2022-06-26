@@ -1,1 +1,6 @@
 <%= render "layouts/header" %>
+
+      <% @funs.each do |fun| %>
+          <%= fun.last_name %> <%= fun.first_name %>
+          <%= fun.gender.name %>
+      <% end %>

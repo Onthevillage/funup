@@ -15,11 +15,11 @@
       <%= image_tag("home-icon.png", class:"header-home-icon") %>
     <% end %>
 
-    <%= link_to fun_followings_path(current_fun.id) do %>
+    <%= link_to fun_followers_path(current_fun.id) do %>
       <%= image_tag("fun-icon.png", class:"header-fun-icon") %>
     <% end %>
 
-    <%= link_to fun_followers_path(current_fun.id) do %>
+    <%= link_to fun_followings_path(current_fun.id) do %>
       <%= image_tag("cheer-icon.png", class:"header-cheer-icon") %>
     <% end %>
 
