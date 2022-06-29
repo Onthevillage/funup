@@ -1,0 +1,52 @@
+.message-index-foundation {
+    width: 100%;
+    height: 230px;
+    background-color: #FAFAFA;
+    position: relative;
+}
+
+.main-block {
+    width: 935px;
+    height: 196px;
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.main-upper-block {
+    display: flex;
+    height: 60px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.upper-left-block {
+    width: 350px;
+    height: 100%;
+    border-right: 1px solid #DBDBDB;
+}
+
+.upper-right-block {
+    width: 585px;
+    height: 100%;
+}
+
+.main-under-block {
+    width: 100%;
+    height: 100%;
+}
+
+.under-left-block {
+    width: 350px;
+    border-right: 1px solid #DBDBDB;
+}
+
+
+.creater-img{
+    width: 56px;
+    height: 56px;
+}

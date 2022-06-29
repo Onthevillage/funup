@@ -1,0 +1,32 @@
+<%= render "layouts/header" %>
+<div class='message-index-foundation'>
+    <div class='main-block'>
+        <div class='main-upper-block'>
+            <div class='upper-left-block'>
+            <%= current_fun.last_name %> <%= current_fun.first_name %>
+            </div>
+            <div class='upper-right-block'>
+            相手ユーザーネーム
+            <div>
+        <div>
+        <div class='main-under-block'>
+            <div class='under-left-block'>
+                <% @funs.each do |fun| %>
+                    <%= fun.last_name %> <%= fun.first_name %>
+                <% end %>
+
+                <% @value_creaters.each do |creater| %>
+                    <div class='message-creater-img'>
+                        <%= image_tag creater.image, class: "creater-img" %>
+                    </div>
+
+                    <h3 class='message-creater-name'>
+                        <%= creater.fun.last_name %> <%= creater.fun.first_name %>
+                    </h3>
+                <% end %>
+            </div>
+            <div class='under-right-block'>
+            <div>    
+        <div>
+    </div>
+</div>
