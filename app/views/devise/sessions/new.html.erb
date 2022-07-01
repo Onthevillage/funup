@@ -1,7 +1,7 @@
 <div class="page-block">
-  <div class="upper-block">  
+  <div class="page-upper-block">  
 
-    <div class="left-block">
+    <div class="page-upper-left-block">
       <div class='sessions-image'>
         <%= image_tag("funup.png", class:"funup-logo-session1") %>
       </div>
@@ -12,22 +12,20 @@
       </div>
     </div>
 
-    <div class="right-block">
+    <div class="page-upper-right-block">
       <div class="sign-in-form">
         <%= image_tag("funup.png", class:"funup-logo-session2") %>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <%= f.email_field :email, placeholder:"メールアドレス", class: 'signin-email' %>
           </div>
 
           <div class="field">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password" %>
+            <%= f.password_field :password, placeholder:"パスワード", autocomplete: "off", class: 'signin-password' %>
           </div>
 
           <div class="actions">
-            <%= f.submit "ログイン" %>
+            <%= f.submit "ログイン", class: 'login-btn' %>
           </div>
         <% end %>
       </div>
@@ -39,6 +37,6 @@
 
   </div>
 
-  <div class="under-white-block">
+  <div class="page-under-white-block">
   </div>
 </div>

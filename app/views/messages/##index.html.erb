@@ -1,16 +1,11 @@
 <%= render "layouts/header" %>
 <div class='message-index-foundation'>
     <div class='main-block'>
-        <div class='main-upper-block'>
-            <div class='upper-left-block'>
+        <div class='main-left-block'>
+            <div class='left-upper-block'>
                 <%= current_fun.last_name %> <%= current_fun.first_name %>
             </div>
-            <div class='upper-right-block'>
-                相手ユーザーネーム
-            </div>            
-        </div>
-        <div class='main-under-block'>
-            <div class='under-left-block'>
+            <div class='left-under-block'>
                 <% @funs.each do |fun| %>
                     <%= fun.last_name %> <%= fun.first_name %>
                 <% end %>
@@ -25,8 +20,13 @@
                     </h3>
                 <% end %>
             </div>
-            <div class='under-right-block'>
-            </div>    
-        </div>
+        <div>
+        <div class='main-right-block'>
+            <div class='right-upper-block'>
+            相手ユーザーネーム
+            <div>
+            <div class='right-under-block'>
+            <div>    
+        <div>
     </div>
 </div>

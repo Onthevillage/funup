@@ -1,18 +1,28 @@
 .page-block {
     position: relative;
-    height: 1024px;
+    height: 814px;
     width: 100%;
+    background-color: #FAFAFA;
 }
 
-.upper-block {
-    height: 100%;
+.page-upper-block {
+    height: calc(100% - 194px);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.left-block {
+.page-upper-left-block {
+    width: 525px;
+    height: 581px;
+    margin-top: 150px;
+}
+
+.sessions-image {
+    width: 300px;
+    height: 100px;
+    margin-left: 25px;
 }
 
 .funup-logo-session1 {
@@ -20,16 +30,65 @@
     height: 100px;
 }
 
+.concept-text {
+    width: 525px;
+    height: 280px;
+}
+
+.page-upper-right-block {
+    width: 350px;
+    height: 581px;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
 .sign-in-form {
     width: 350px;
     height: 337px;
     background-color: #FFFFFF;
     border: 1px solid #DBDBDB;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .funup-logo-session2 {
     width: 157px;
     height: 53px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.signin-email {
+    width: 268px;
+    height: 38px;
+    margin-bottom: 15px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    color: #A1A1A1;
+    border-radius: 5px;
+}
+
+.signin-password {
+    width: 268px;
+    height: 38px;
+    margin-bottom: 15px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    color: #A1A1A1;
+    border-radius: 5px;
+}
+
+.login-btn {
+    width: 268px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #0095F6;
+    border: none;
+    color: #FFFFFF;
+}
+
+.signup-btn {
+    color: #0095F6;
 }
 
 .link-signup {
@@ -37,9 +96,12 @@
     height: 71px;
     background-color: #FFFFFF;
     border: 1px solid #DBDBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.under-white-block {
+.page-under-white-block {
     background-color: #FFFFFF;
     width: 100%;
     height: 194px;
