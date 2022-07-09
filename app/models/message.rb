@@ -6,4 +6,7 @@ class Message < ApplicationRecord
     
     belongs_to :fun
     belongs_to :value_creater
+
+    extend ActiveHash::Associations::ActiveRecordExtensions
+    belongs_to :type
 end

@@ -5,7 +5,8 @@
             <div class='upper-left-block'>
                 <%= current_fun.last_name %> <%= current_fun.first_name %>
             </div>
-            <div class='upper-right-block'>
+            <div class='upper-right-block-new'>
+                <%= @partner_name.last_name %> <%= @partner_name.first_name %>            
             </div>            
         </div>
         <div class='main-under-block'>
@@ -39,14 +40,18 @@
                     <% end %>
                 </div>
             </div>
-            <div class='under-right-block'>
-                <div class='index-letter-icon-block'>
-                    <%= image_tag("letter-icon.png", class:"index-letter-icon") %>
+            <div class='under-right-block-new'>
+                <div class='new-messages-block'>
+                    <div class='partner-left-messages'>
+                    </div> 
+                    <div class='myself-right-messages'>
+                    </div> 
                 </div>
-                <div class='texts-under-letter-icon'>
-                    <h2>メッセージ</h2>
-                    <p>友達やグループに非公開で写真やメッセージを送信できます</p>
-                </div>
+                <%= form_with model: @message, url: messages_path(partner_id: @partner_create_path), id: 'new-message-form', class: 'new-message-form', local: true do |f| %>
+                    <%= image_tag("type-icon.png", class:"message-type-icon") %>
+                    <%= f.text_field :content, class: 'message-content', placeholder: 'メッセージ...' %>
+                    <%= f.submit '送信', class: 'form-submit' %>
+                <% end %>
             </div>    
         </div>
     </div>

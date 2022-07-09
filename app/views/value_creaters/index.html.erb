@@ -1,22 +1,20 @@
 <%= render "layouts/header" %>
-
-      <%= link_to 'ログアウト', destroy_fun_session_path, method: :delete, class: "logout" %>
-      <%= link_to '仮新規作成', new_value_creater_path, method: :get, class: "new" %>
-
-      <% @value_creaters.each do |creater| %>
-          <div class='creater-img-content'>
-            <%= link_to value_creater_path(creater) do %>
-              <%= image_tag creater.image, class: "creater-img" %>
-            <% end %>
-          </div>
-
-          <div class='creater-info'>
-            <h3 class='creater-name'>
-              <%= creater.fun.last_name %> <%= creater.fun.first_name %>
-            </h3>
-            <div class='creater-workplace'>
-              <%= creater.name_workplace %>
-              <%= creater.address_workplace %>
-            </div>
-          </div>
+<div class='value-creaters-index-foundation'>
+  <%= link_to 'ログアウト', destroy_fun_session_path, method: :delete, class: "logout" %>
+  <%= link_to '仮新規作成', new_value_creater_path, method: :get, class: "new" %>
+  
+  <% @value_creaters.each do |creater| %>
+    <div class='creaters-each-block'>     
+      <%= link_to value_creater_path(creater) do %>
+        <%= image_tag creater.image, class: "index-creater-image" %>
       <% end %>
+      <div class='each-texts'>
+        <p> <%= creater.fun.last_name %> <%= creater.fun.first_name %>
+        <span class='sentence'> <%= creater.fun.gender.name %> </span> </p>
+        <p> <%= creater.name_workplace %> </p>
+        <p> <%= creater.address_workplace %> </p>
+      </div>
+    </div>
+  <% end %>
+
+</div>

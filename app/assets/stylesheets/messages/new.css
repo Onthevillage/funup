@@ -31,12 +31,13 @@
     align-items: center;
 }
 
-.upper-right-block {
+.upper-right-block-new {
     width: 585px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid #DBDBDB;
 }
 
 .main-under-block {
@@ -63,10 +64,11 @@
     align-items: center;
 }
 
-.under-right-block {
+.under-right-block-new {
     width: 585px;
     height: 100%;
-    text-align: center;
+    overflow: scroll;
+    position: relative;
 }
 
 .message-companion-images {
@@ -74,8 +76,28 @@
     height: 56px;
 }
 
-.index-letter-icon {
-    width: 150px;
-    height: 150px;
-    margin-top: 60px;
+.new-message-form {
+    width: 543px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    bottom: 10px;
+    border: 1px solid #DBDBDB;
+    position: absolute;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.message-type-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.message-content {
+    border: none;
+    margin-left: 13px;
 }

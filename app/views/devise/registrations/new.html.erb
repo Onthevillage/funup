@@ -6,43 +6,43 @@
       </div>
 
       <div class='contents'>
-          <h1>登録してfunを増やそう</h1>
+          <h1 class='contents-text'>登録してfunを増やそう</h1>
 
-        <%= form_with model: @fun, url: fun_registration_path, id: 'new_fun', class: 'new_fun', local: true do |f| %>
+        <%= form_with model: @fun, url: fun_registration_path, id: 'contents-signup-form', class: 'contents-signup-form', local: true do |f| %>
           <%#<%= render "devise/shared/error_messages", resource: resource %>
 
 
           <div class='input-name-wrap'>
-            <%= f.text_field :last_name, class:"input-name", id:"last-name", placeholder:"姓" %>
+            <%= f.text_field :last_name, class:"last-name parts", id:"last-name", placeholder:"姓" %>
           </div>  
 
           <div class='input-name-wrap'>
-            <%= f.text_field :first_name, class:"input-name", id:"first-name", placeholder:"名" %>
+            <%= f.text_field :first_name, class:"first-name parts", id:"first-name", placeholder:"名" %>
           </div>  
 
           <div class="field">
-            <%= f.email_field :email, placeholder:"メールアドレス" %>
+            <%= f.email_field :email, class:"signup-form-email parts", placeholder:"メールアドレス" %>
           </div>
 
           <div class="field">
-            <%= f.password_field :password, placeholder:"パスワード", autocomplete: "off" %>
+            <%= f.password_field :password, class:"signup-form-password parts", placeholder:"パスワード", autocomplete: "off" %>
           </div>
 
           <div class="field">
-            <%= f.password_field :password_confirmation, placeholder:"確認用パスワード", autocomplete: "off" %>
+            <%= f.password_field :password_confirmation, class:"signup-form-password_confirmation parts", placeholder:"確認用パスワード", autocomplete: "off" %>
           </div>
 
-          <div class="field">
-            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"fun-gender"}) %>
+          <div class="signup-form-gender">
+            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box parts", id:"fun-gender"}) %>
           </div>
 
-          <div class='input-birth-wrap'>
+          <div class='signup-form-birth'>
             <%= raw sprintf(
-            f.date_select(:birth_date,class:'select-birth',id:"birth-date",use_month_numbers: true,prompt:'--',start_year: 1930,end_year: (Time.now.year - 5),date_separator: '%s')," 年 ", " 月 ") + " 日 " %>
+            f.date_select(:birth_date,class:'select-birth parts',id:"birth-date",use_month_numbers: true,prompt:'--',start_year: 1930,end_year: (Time.now.year - 5),date_separator: '%s')," 年 ", " 月 ") + " 日 " %>
           </div>
 
-          <div class="actions">
-            <%= f.submit "登録する" %>
+          <div class="signup-form-action">
+            <%= f.submit "登録する",class:'parts' %>
           </div>
         <% end %>
 
@@ -50,7 +50,7 @@
     </div> 
   </div>
   <div class='under-block'>
-    <div class='link-signin'>
+    <div class='under-link-signin'>
      アカウントをお持ちですか？<%=link_to 'ログインする', new_fun_session_path, class:"link-login-btn" %>
     </div>
   </div>
