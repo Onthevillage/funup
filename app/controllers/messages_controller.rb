@@ -19,11 +19,12 @@ class MessagesController < ApplicationController
 
     def create
         message = Message.new
+
     end
 
     private
 
     def message_params
-        params.require(:message).permit(:type_id, :content)
+        params.require(:message).permit(:type_id, :content).merge(user_id: current_fun.id)
     end
 end

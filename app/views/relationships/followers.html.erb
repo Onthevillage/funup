@@ -1,6 +1,22 @@
 <%= render "layouts/header" %>
-
-      <% @funs.each do |fun| %>
-          <%= fun.last_name %> <%= fun.first_name %>
-          <%= fun.gender.name %>
-      <% end %>
+<div class='followers-foundation'>
+    <% @funs.each do |fun| %>
+        <div class='followers-each-fun-block'>
+            <%= link_to new_message_path(fun_id: fun.id) do %>
+                <% if !fun.value_creater.nil? %> 
+                    <%= image_tag fun.value_creater.image, class: "followers-fun-images" %>
+                <% elsif fun.gender_id == 2 %>
+                    <%= image_tag("man-temporary.png", class:"followers-fun-images") %>
+                <% elsif fun.gender_id == 3 %>
+                    <%= image_tag("woman-temporary.png", class:"followers-fun-images") %> 
+                <% elsif fun.gender_id == 4 %>
+                    <%= image_tag("lgbt-temporary.png", class:"followers-fun-images") %> 
+                <% end %>
+            <% end %>
+            <div class='followers-each-fun-texts'>
+                <%= fun.last_name %> <%= fun.first_name %>
+                <%= fun.gender.name %>
+            </div>
+        </div>
+    <% end %>
+</div>

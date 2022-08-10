@@ -101,3 +101,24 @@
     border: none;
     margin-left: 13px;
 }
+
+
+/*表示・非表示設定*/
+
+#message-type-icon-id {
+    display: none;
+}
+
+.message-type-icon-id {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.message-types-block {
+    background-color: #FFFFFF;
+    height: 100px;
+}
+
+#message-type-icon-id:checked+label+.message-types-block{
+    display: none;
+}

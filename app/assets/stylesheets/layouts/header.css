@@ -4,7 +4,11 @@
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #DBDBDB
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.search-form {
+    margin-left: 140px;
 }
 
 
@@ -21,7 +25,8 @@
 
 .header-home-icon {
     width: 35px;
-    height: 35px; 
+    height: 35px;
+    margin-left: 330px;
 }
 
 .header-fun-icon {

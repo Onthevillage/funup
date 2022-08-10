@@ -48,7 +48,13 @@
                     </div> 
                 </div>
                 <%= form_with model: @message, url: messages_path(partner_id: @partner_create_path), id: 'new-message-form', class: 'new-message-form', local: true do |f| %>
-                    <%= image_tag("type-icon.png", class:"message-type-icon") %>
+                    <input type="checkbox" id="message-type-icon-id">
+                        <label class="message-type-icon-id" for="message-type-icon-id">    
+                            <%= image_tag("type-icon.png", class:"message-type-icon") %>
+                        </label>
+                        <div class="message-types-block">
+                            <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"message-types-select"}) %>                            
+                        </div>
                     <%= f.text_field :content, class: 'message-content', placeholder: 'メッセージ...' %>
                     <%= f.submit '送信', class: 'form-submit' %>
                 <% end %>

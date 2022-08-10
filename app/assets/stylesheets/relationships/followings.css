@@ -1,11 +1,11 @@
-.value-creaters-index-foundation {
+.followings-foundation {
     background-color: #FAFAFA;
     width: 1280px;
     height: auto;
     overflow: scroll;
 }
 
-.creaters-each-block {
+.followings-each-creater-block {
     width: 614px;
     height: 160px;
     background-color: #FFFFFF;
@@ -17,16 +17,16 @@
     align-items: center;
 }
 
-.index-creater-image {
+.followings-creater-images {
     width: 100px;
     height: 100px;
     margin-left: 10px;
 }
 
-.each-texts {
+.followings-each-creater-texts {
     margin-left: 30px;
 }
 
-.sentence {
+.followings-sentence {
     margin-left: 30px;
 }

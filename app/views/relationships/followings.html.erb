@@ -1,20 +1,16 @@
 <%= render "layouts/header" %>
-
-      <% @value_creaters.each do |creater| %>
-          <div class='creater-img-content'>
-            <%= link_to value_creater_path(creater) do %>
-              <%= image_tag creater.image, class: "creater-img" %>
-            <% end %>
-          </div>
-
-          <div class='creater-info'>
-            <h3 class='creater-name'>
-              <%= creater.fun.last_name %> <%= creater.fun.first_name %>
-            </h3>
-            <div class='creater-workplace'>
-              <%= creater.name_workplace %>
-              <%= creater.address_workplace %>
-            </div>
-          </div>
-          
+<div class='followings-foundation'>
+  <% @value_creaters.each do |creater| %>
+    <div class='followings-each-creater-block'>
+      <%= link_to value_creater_path(creater) do %>
+        <%= image_tag creater.image, class: "followings-creater-images" %>
       <% end %>
+      <div class='followings-each-creater-texts'>
+        <p> <%= creater.fun.last_name %> <%= creater.fun.first_name %>
+        <span class='followings-sentence'> <%= creater.fun.gender.name %> </span> </p>
+        <p> <%= creater.name_workplace %> </p>
+        <p> <%= creater.address_workplace %> </p>
+      </div>
+    </div>
+  <% end %>
+</div>
